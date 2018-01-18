@@ -1,5 +1,5 @@
 # jsonStore
-A free and open JSON store service can be accessed [here](https://jsonkemi.herokuapp.com/)
+A free and open JSON store service can be accessed [here](https://nestjsonstore.herokuapp.com/)
 
 This app allows users to save their json files and access them via API calls.
 
