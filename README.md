@@ -13,7 +13,7 @@ The following API endpoints can be accessed:
 
 ## Project Dependencies
  - body-parser- NodeJs body parsing middleware,
- - express: Fast, Unopinionated minimalistic web framework. Used as the web server for this application,
+ - express: Fast, Unopinionated web framework. Used as the web server for this application,
  - fs: To open and write into files
  - morgan: HTTP Request Logger Middleware for NodeJs,
  - nodemon: A simple monitor script for development use. For Live Reloading,
