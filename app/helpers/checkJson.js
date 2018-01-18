@@ -9,7 +9,6 @@ function checkJson(jsonFile){
   if (typeof jsonFile === "object" && jsonFile !== null) {
       return true;
   }
-
   return false;
 }
 module.exports= checkJson
