@@ -23,7 +23,7 @@ class jsonController{
           }
           Json.push(newJson);
 
-          let url = 'http://localhost:8080/docs/'+id;
+          let url = req.protocol + '://' + req.get('host') +'/docs/'+id;
 
           fs.writeFile('./jsonModel.json', JSON.stringify(Json, null, 4),  function(err) {
             if (err) {
