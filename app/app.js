@@ -3,31 +3,31 @@ var path = require ('path');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
 const Route = require('./routes');
-var mongoose   = require('mongoose');
-const dotenv = require('dotenv');
+// var mongoose   = require('mongoose');
+// const dotenv = require('dotenv');
 
 
 
 const app = express();
 
 
-mongoose.connect('mongodb://localhost/Json-Db', {
-  useMongoClient: true
-});
+// mongoose.connect('mongodb://localhost/Json-Db', {
+//   useMongoClient: true
+// });
 
-// Get Mongoose to use the global promise library
-mongoose.Promise = global.Promise;
-//Get the default connection
-var db = mongoose.connection;
+// // Get Mongoose to use the global promise library
+// mongoose.Promise = global.Promise;
+// //Get the default connection
+// var db = mongoose.connection;
 
-//Bind connection to error event (to get notification of connection errors)
-db.on('error', console.error.bind(console, 'MongoDB connection error:'));
-
-
+// //Bind connection to error event (to get notification of connection errors)
+// db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 
 
-dotenv.config();
+
+
+// dotenv.config();
 
 
 app.use(logger('dev'));
