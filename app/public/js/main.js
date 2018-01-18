@@ -9,38 +9,53 @@ $('#jsonform').on('submit', function(e) {
       method: 'POST',
       dataType: 'json',
       data: {
-          value: $('#textarea').val(),
+          data: $('#textarea').val(),
       }
   }).done(function(data) {
       // The JSON sent back from the server will contain a success message
       let urlfield = document.getElementById('urlfield');
       urlfield.value = "";
       urlfield.value = urlfield.value + data.url;
+      alert(data.message)
   }).fail(function(error) {
-      alert(error);
+      alert(error.toString());
   });
 });
 
-$("#showjson").click(function(){
-  let jsonurl = prompt("Please enter the url to yor json data");
+// $("#showjson").click(function(){
+//   let jsonurl = prompt("Please enter the url to yor json data");
+// 	$.ajax({url: jsonurl, success: function(result){
+//       $("#viewdata").html(result);
+//   }});
+// });
 
-  $.ajax({url: jsonurl, success: function(result){
-      let textarea = document.getElementById('textarea');
-      textarea.value = "";
-      $("#viewdata").html(result);
-  }});
-});
+// function getid(url){
+//     //split url to array
+//     //get last four values
+//     //return last four values
+// }
+// $("#updatejson").click(function(){
+//   let jsonurl = prompt("Please enter the url to yor json data");
+// 	$.ajax({url: jsonurl, success: function(result){
+// 		let textarea = document.getElementById('textarea');
+// 		textarea.value = "";
+// 		textarea.value = textarea.value + result;
+// 		//$("#viewdata").html(result);
+// }});
 
-$("#updatejson").click(function(){
-  let jsonurl = prompt("Please enter the url to yor json data");
-
-  $.ajax({url: jsonurl, success: function(result){
-      $("#textarea").html(result);
-       let urlfield = document.getElementById('urlfield');
-       urlfield.value = "Url for your newly saved data";
-
-  }});
-});
+	// $.ajax({
+	// 	url: '/docs/'+id,
+	// 	method: 'GET',
+	// 	dataType: 'json',
+	// }).done(function(data) {
+	// 	// The JSON sent back from the server will contain a success message
+	// 	let textarea = document.getElementById('textarea');
+	// 	textarea.value = "";
+	// 	textarea.value = textarea.value + data.data;
+	// }).fail(function(error) {
+	// 	alert(error.toString());
+	// });
+// });
 
 
 
